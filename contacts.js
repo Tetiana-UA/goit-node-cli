@@ -25,7 +25,7 @@ async function getContactById(contactId) {
   if (typeof contact === "undefined") {
     return null;
   }
-  return contacts;
+  return contact;
 }
 
 async function removeContact(contactId) {
