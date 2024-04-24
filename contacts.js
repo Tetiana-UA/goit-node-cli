@@ -3,11 +3,10 @@ import path from "node:path";
 import crypto from "node:crypto";
 
 const contactsPath = path.resolve("db", "contacts.json");
-//const contactsPath = path.join(__dirname, "contacts.json");
 
 async function readContacts() {
   const data = await fs.readFile(contactsPath, { encoding: "utf-8" });
-  return JSON.parsel(data);
+  return JSON.parse(data);
 }
 
 function writeContacts(contacts) {
